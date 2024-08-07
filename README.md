@@ -1,6 +1,6 @@
 
 <h3 align="center"><a href="https://arxiv.org/pdf/2403.14972" style="color:#9C276A">
-A Picture Is Worth a Graph: Blueprint Debate on Graph for Multimodal Reasoning</a></h3>
+A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning</a></h3>
 <h5 align="center">
 
 [![arXiv](https://img.shields.io/badge/Arxiv-2406.07476-AD1C18.svg?logo=arXiv)](https://arxiv.org/pdf/2403.14972)
