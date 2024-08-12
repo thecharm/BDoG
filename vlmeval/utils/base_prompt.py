@@ -6,13 +6,13 @@ def create_one_example(format_, question, context, options, answer, knowledge, i
     aff_base = "You are a fellow debater from the AFFIRMATIVE side, You are more Emotional to think about problems."
     neg_base = "You are a fellow debater from the NEGATIVE side, You are more Rational in thinking about problems."
 
-    kg_emo = f"Graph: {knowledge[0]}\n" if knowledge[0]!='none' else ""
-    kg_rat = f"Graph: {knowledge[1]}\n" if knowledge[1]!='none' else ""
+    kg_emo = f"Emotional Graph: {knowledge[0]}\n" if knowledge[0]!='none' else ""
+    kg_rat = f"Rational Graph: {knowledge[1]}\n" if knowledge[1]!='none' else ""
     
     hint = f"Hint: {context}\n" if context != "none" else ""
     question_ = f"Question: {question}\n"
     option_ = f"Options:\n{options}" if options != "none" else ""
-    answer_ = "Answer with the option's letter from the given choices directly." if options != "none" else "Answer directly."
+    answer_ = "Please select the correct answer from the options above, without any explaination." if options != "none" else "Answer directly."
     
     if input_format=="IQ":
         input = f"""{hint}{question_}{option_}{answer_}"""
@@ -22,11 +22,10 @@ def create_one_example(format_, question, context, options, answer, knowledge, i
 """
     
     elif input_format == "GKG":
-        input = f"""{hint}{question_}{option_}For the provided image and its associated question. generate a scene graph in JSON format that includes the following:
-1. Obiects that are relevant to answering the question.
-2. Obiect attributes that are relevant to answering the question.
-3. Obiect relationships that are releyant to answering the question.
-"""
+        input = f"""For the provided image and its associated question. generate a scene graph in JSON format that includes the following:
+1. Objects, attributes, relationships that are more relevant to answering the question.
+2. Objects are NO MORE THAN 3. 
+{hint}{question_}"""
 
     #### ODebate_stage
     elif input_format == "ODIM":
@@ -58,19 +57,19 @@ Based on the debate Solution of the question, Do not give the answer, But your B
         input = f"""{aff_base}
 For the provided image and its associated question, Please give your solution and ideas to solve this problem, but do not give a final answer. Generate an updated graph from a different view based on the Debate Graph in JSON format that includes the following:
 1. Objects, attributes, relationships that are more relevant to answering the question.
-2. Delete the irrelevant objects, attributes and relationships.
+2. Objects are NO MORE THAN 3.  
 {hint}{question_}""" 
         
     elif input_format == "KNIM":
         input = f"""{neg_base}  
 For the provided image and its associated question, Please give your solution and ideas to solve this problem, but do not give a final answer. Generate an updated graph from a different view based on the Debate Graph in JSON format that includes the following:
 1. Objects, attributes, relationships that are more relevant to answering the question.
-2. Delete the irrelevant objects, attributes and relationships.
+2. Objects are NO MORE THAN 3. 
 {hint}{question_}"""  
         
     elif input_format == "KDQIM":
         input = f"""{aff_base} 
-Based on the debate Solution of the question, Please give your Better solution and ideas to solve this problem, but do not give a final answer. Generate an updated graph from a different view based on the Debate Graph in JSON format that includes the following:
+For the provided image and its associated question, Please give your solution and ideas to solve this problem, but do not give a final answer. Generate an updated graph from a different view based on the Debate Graph in JSON format that includes the following:
 1. Objects, attributes, relationships that are more relevant to answering the question.
 2. Delete the irrelevant objects, attributes and relationships.
 {hint}{question_}{kg_rat}
@@ -78,14 +77,14 @@ Based on the debate Solution of the question, Please give your Better solution a
         
     elif input_format == "KNQIM":
         input = f"""{neg_base} 
-Based on the debate Solution of the question, Please give your Better solution and ideas to solve this problem, but do not give a final answer. Generate an updated graph from a different view based on the Debate Graph in JSON format that includes the following:
+For the provided image and its associated question, Please give your solution and ideas to solve this problem, but do not give a final answer. Generate an updated graph from a different view based on the Debate Graph in JSON format that includes the following:
 1. Objects, attributes, relationships that are more relevant to answering the question.
 2. Delete the irrelevant objects, attributes and relationships.
 {hint}{question_}{kg_emo}
 """ 
         
     elif input_format == "KAGM":
-        input = f"""{hint}{kg_emo}{kg_rat}{question_}{option_}{answer_}
+        input = f"""You're good at summarizing and answering questions.{hint}{kg_emo}{kg_rat}Use the image and two debate Solution as context and answer the following question:\n{question_}{option_}{answer_}
 """
         
     # Outputs
@@ -93,7 +92,7 @@ Based on the debate Solution of the question, Please give your Better solution a
         output = "Answer:"
         
     elif output_format == 'G':
-        output = f"Graph: "
+        output = f"Solution: "
 
     text = input + output
     text = text.replace("  ", " ")
