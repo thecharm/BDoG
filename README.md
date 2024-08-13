@@ -20,7 +20,7 @@ A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning
 
 ## 🚀 Method
 
-![method](assets/Model1.pdf "method")
+![method](assets/Model1.png "method")
 
 ## 🏗️ QuickStart
 ### 1. Installation
