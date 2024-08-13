@@ -60,13 +60,9 @@ During this process, the datasets will be automatically downloaded to the `/root
 
 If this repo is useful to you, please cite using this BibTeX.
 ```bibtex
-@misc{zheng2024pictureworthgraphblueprint,
-      title={A Picture Is Worth a Graph: Blueprint Debate on Graph for Multimodal Reasoning}, 
-      author={Changmeng Zheng and Dayong Liang and Wengyu Zhang and Xiao-Yong Wei and Tat-Seng Chua and Qing Li},
-      year={2024},
-      eprint={2403.14972},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2403.14972}, 
+@inproceedings{zheng2024picture,
+  title={A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning},
+  author={Zheng, Changmeng and Liang, DaYong and Zhang, Wengyu and Wei, Xiaoyong and Chua, Tat-Seng and Li, Qing},
+  booktitle={ACM Multimedia 2024}
 }
 ```
