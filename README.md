@@ -15,7 +15,7 @@ A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning
 
 ## 🔥News
 
-- __[2024.08]__ 
+- __[2024.10]__ Our paper has been nominated as the best paper award!
 
 
 ## 🚀 Method
