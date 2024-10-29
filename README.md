@@ -1,6 +1,12 @@
 
-<h3 align="center"><a href="https://arxiv.org/pdf/2403.14972" style="color:#9C276A">
-A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning</a></h3>
+<div align="center">
+
+# <b>A Picture Is Worth a Graph</b>: A Blueprint Debate Paradigm for Multimodal Reasoning
+
+[Changmeng Zheng](https://github.com/thecharm)<sup>1</sup>, [Dayong Liang](https://github.com/YongLD)<sup>2</sup>, [Wengyu Zhang](https://github.com/zhangwengyu999)<sup>1</sup>, [Xiao-Yong Wei](https://scholar.google.com/citations?user=8kxWTokAAAAJ&hl=en)<sup>*,1</sup>, [Tat-Seng Chua](https://scholar.google.com.sg/citations?user=Z9DWCBEAAAAJ&hl=en)<sup>3</sup>, [Qing Li](https://scholar.google.com/citations?user=D1LEg-YAAAAJ&hl=en)<sup>1</sup>
+
+<p><sup>1</sup>The Hong Kong Polytechnic &nbsp;&nbsp;<sup>2</sup>South China University of Technology &nbsp;&nbsp;<sup>3</sup>National University of Singapore
+<br><sup>*</sup>Corresponding author &nbsp;&nbsp;
 <h5 align="center">
 
 [![arXiv](https://img.shields.io/badge/Arxiv-2406.07476-AD1C18.svg?logo=arXiv)](https://arxiv.org/pdf/2403.14972)
@@ -12,15 +18,15 @@ A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning
 
  Blueprint Debate-on-Graph (BDoG)
 
-
 ## 🔥News
 
-- __[2024.10]__ Our paper has been nominated as the best paper award!
-
+🔥 __[2024.10]__ Our paper has been nominated as the best paper award!\
+🔥 __[2024.07]__ The paper and Code are released!
 
 ## 🚀 Method
 
 ![method](assets/Model1.png "method")
+</div>
 
 ## 🏗️ QuickStart
 ### 1. Installation
@@ -55,6 +61,12 @@ torchrun --nproc_per_node=1 run.py --data ScienceQA_TEST \
 The results are saved in the `BDoG/results/instructblip_13b` folder.
 
 During this process, the datasets will be automatically downloaded to the `/root/LMUData/` directory. If you need to change the data storage path, please reset `--lmudata`.
+
+## ❤️ Acknowledgments
+- [VLMEvalKit](https://github.com/open-compass/VLMEvalKit): An open-source evaluation toolkit of large vision-language models (LVLMs).
+- [LLaVA](https://github.com/haotian-liu/LLaVA): Wounderful MLLM based on Large Language and Vision Assistant.
+- [LAVIS](https://github.com/salesforce/LAVIS): The amazing open-sourced multimodality learning codebase.
+
 
 ## 📑 Citation
 
