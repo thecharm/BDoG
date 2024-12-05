@@ -74,7 +74,9 @@ If this repo is useful to you, please cite using this BibTeX.
 ```bibtex
 @inproceedings{zheng2024picture,
   title={A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning},
-  author={Zheng, Changmeng and Liang, DaYong and Zhang, Wengyu and Wei, Xiaoyong and Chua, Tat-Seng and Li, Qing},
-  booktitle={ACM Multimedia 2024}
+  author={Zheng, Changmeng and Liang, Dayong and Zhang, Wengyu and Wei, Xiao-Yong and Chua, Tat-Seng and Li, Qing},
+  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  pages={419--428},
+  year={2024}
 }
 ```
